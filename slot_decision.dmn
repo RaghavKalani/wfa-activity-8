@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0qhqljm" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.46.1" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.9.0">
+  <decision id="Decision_0kthchc" name="Decision 1">
+    <decisionTable id="DecisionTable_1wr18gb">
+      <input id="Input_1" label="department">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0y8tgm1" label="bookedCount">
+        <inputExpression id="LiteralExpression_1mczg7h" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="slotStatus" typeRef="string" />
+      <output id="OutputClause_0sym5zx" label="suggestedAction" typeRef="string" />
+      <rule id="DecisionRule_1iwoor6">
+        <inputEntry id="UnaryTests_0pyxmfz">
+          <text>Cardiology</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vp13uq">
+          <text>&lt;10</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0br3eg7">
+          <text>available</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jawkfh">
+          <text>book</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_18aewig">
+        <inputEntry id="UnaryTests_15929en">
+          <text>Cardiology</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kr4y5x">
+          <text>&gt;=10</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0t6d1u6">
+          <text>full</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10n07oi">
+          <text>notify_full</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0q404w9">
+        <inputEntry id="UnaryTests_0nx1uf9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dhcqa4">
+          <text>&lt;10</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18kexcc">
+          <text>available</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jvaa1o">
+          <text>book</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1506xb7">
+        <inputEntry id="UnaryTests_1mh7e84">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rkore3">
+          <text>&gt;=10</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0lzpndp">
+          <text>full</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1o0ytcj">
+          <text>notify_full</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape id="Decision_0kthchc_di" dmnElementRef="Decision_0kthchc">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
